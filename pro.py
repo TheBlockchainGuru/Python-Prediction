@@ -136,7 +136,7 @@ class PredictionBot():
         #self.get_round()
         while True:
             # self.remain_time = self.get_remain_time()
-            if self.remain_time == 60:
+            if self.remain_time == 30:
                 threading.Thread(target=self.bet_tx).start()
             if self.remain_time == event_time:
                 self.bot_flag = True
