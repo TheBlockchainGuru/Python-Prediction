@@ -20,7 +20,7 @@ class Token:
         session.mount('https://', adapter)
         self.i = 0
         self.j = 0
-        self.web3 = Web3(Web3.HTTPProvider(self.provider, session=session))
+        self.web3 = Web3(Web3.WebsocketProvider(self.provider, websocket_timeout=60))
         self.wallet_address = None
         self.signed_tx = None
         self.signed_tx_bear = None
