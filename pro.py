@@ -126,7 +126,7 @@ class PredictionBot():
                 self.wallet.set_gas_limit(gas_price=10, gas_limit=self.gas_limit)
                 # self.start_prediction()
                 threading.Thread(target=self.count_down).start()
-                threading.Thread(target=self.start_prediction, args=[35]).start()
+                threading.Thread(target=self.start_prediction, args=[self.event_time]).start()
         except Exception as e:
             self.wallet_connected = False
             print('Wallet Not Connected')
